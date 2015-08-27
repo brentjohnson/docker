@@ -48,27 +48,27 @@ Post testing the scenarios of feature story, User would request with another JIR
 
 **Starting Swarm Cluster on any one node**
 
-      `docker -H tcp://$(hostname -i):2375 run --rm swarm create`
+      docker -H tcp://$(hostname -i):2375 run --rm swarm create
 
 output:
-      `5694e00d4e6ec36ac2997d954db6ba41`
+	`5694e00d4e6ec36ac2997d954db6ba41`
       
 
 **Starting Swarm manager on any one node**
 
-      `docker -H tcp://$(hostname -i):2375 run -d -p 2376:2375 swarm manage token://5694e00d4e6ec36ac2997d954db6ba41`
+      docker -H tcp://$(hostname -i):2375 run -d -p 2376:2375 swarm manage token://5694e00d4e6ec36ac2997d954db6ba41
 
 
 
 **Join swarm cluster on each node**
 
-      `docker -H tcp://$(hostname -i):2375 run -d swarm join --addr=$(hostname -i):2375 token://5694e00d4e6ec36ac2997d954db6ba41`
+      docker -H tcp://$(hostname -i):2375 run -d swarm join --addr=$(hostname -i):2375 token://5694e00d4e6ec36ac2997d954db6ba41
 
 
 
 **Swarm Nodes Info** 
 
-      `docker -H tcp://<SWARM_MANAGER_HOST>:2376 info`
+      docker -H tcp://<SWARM_MANAGER_HOST>:2376 info
 
 ### RANCHER
 		
