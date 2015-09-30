@@ -71,7 +71,15 @@ output:
       docker -H tcp://<SWARM_MANAGER_HOST>:2376 info
 
 ### RANCHER
-		
 
+Details to be provided...
+
+### Using Weave, Swarm and Docker to manage container network 	
+
+Details to be provided...
+
+### Get GUI apps from docker running using SSH-TUNNELING 
+
+Follow the [link](https://github.com/aku163/docker/blob/master/GUI.md)
 		
 
